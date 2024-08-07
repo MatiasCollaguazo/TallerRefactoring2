@@ -1,12 +1,10 @@
 package ec.edu.espol.tallerrefactoring2;
 
 import java.util.List;
+import java.time.LocalDateTime; //Por que existe la clase LocalDateTime
 
 public class Consulta {
-    public int dia;
-    public int mes;
-    public int año;
-    private String hora;
+    private LocalDateTime fechaHora;
     private Paciente paciente;
     private Medico medico;
     private ServicioMedico servicioMedico;
@@ -15,23 +13,12 @@ public class Consulta {
     private String tratamiento;
     private List<String> examenesMedicos;
 
-    public Consulta(int dia, int mes, int año, String hora, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
-        this.dia = dia;
-        this.mes = mes;
-        this.año = año;
-        this.hora = hora;
+    public Consulta(LocalDateTime fechaHora, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
+        this.fechaHora = fechaHora;
         this.servicioMedico = servicioMedico;
         this.paciente = paciente;
         this.medico = medico;
         this.realizada = false;
-    }
-
-    public String getHora() {
-        return hora;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
     }
 
     public Paciente getPaciente() {
