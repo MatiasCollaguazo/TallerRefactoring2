@@ -12,18 +12,18 @@ public class HistorialMedico {
     }
 
     public List<Consulta> getConsultas() {
-        return consultas;
+        return new ArrayList<>(consultas);
     }
 
-    public void setConsultas(List<Consulta> consultas) {
-        this.consultas = consultas;
+    public void addConsulta(Consulta consulta) {
+        consultas.add(consulta);
     }
 
     public List<RecetaMedica> getRecetasMedicas() {
-        return recetasMedicas;
+        return new ArrayList<>(recetasMedicas);
     }
 
-    public void setRecetasMedicas(List<RecetaMedica> recetasMedicas) {
-        this.recetasMedicas = recetasMedicas;
+    public void addRecetaMedica(RecetaMedica recetaMedica) {
+        recetasMedicas.add(recetaMedica);
     }
 }
