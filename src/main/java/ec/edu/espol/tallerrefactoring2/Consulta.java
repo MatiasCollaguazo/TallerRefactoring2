@@ -20,6 +20,10 @@ public class Consulta {
         this.medico = medico;
         this.realizada = false;
     }
+    
+    public LocalDateTime getFechaHora(){
+        return fechaHora;
+    }
 
     public Paciente getPaciente() {
         return paciente;
