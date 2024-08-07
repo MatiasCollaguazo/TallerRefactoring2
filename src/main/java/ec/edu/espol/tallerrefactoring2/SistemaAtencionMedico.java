@@ -36,7 +36,7 @@ public class SistemaAtencionMedico {
 
     public double calcularValorFinalConsulta(double costoConsulta, int edadPaciente){
         double valorARestar = 0;
-        if(edadPaciente>=65){
+        if(edadPaciente>=Paciente.ADULTO_MAYOR_EDAD){
             valorARestar = costoConsulta*DESCUENTO_ADULTOS_MAYORES; //0.25 es el descuento para adultos mayores
         }
         return costoConsulta-valorARestar;
