@@ -24,6 +24,10 @@ public class Consulta {
     public LocalDateTime getFechaHora(){
         return fechaHora;
     }
+    
+    public void setFechaHora(LocalDateTime fechaHora){
+        this.fechaHora = fechaHora;
+    }
 
     public Paciente getPaciente() {
         return paciente;
