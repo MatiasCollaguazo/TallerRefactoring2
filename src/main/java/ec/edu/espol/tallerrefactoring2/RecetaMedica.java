@@ -1,21 +1,22 @@
 package ec.edu.espol.tallerrefactoring2;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecetaMedica {
     private LocalDateTime fechaHora;
     private Paciente paciente;
     private Medico medico;
-    private List<String> medicamentos;
+    private List<Medicamento> medicamentos;
 
-    public RecetaMedica(LocalDateTime fechaHora, Paciente paciente, Medico medico, List<String> medicamentos) {
+    public RecetaMedica(LocalDateTime fechaHora, Paciente paciente, Medico medico, List<Medicamento> medicamentos) {
         this.fechaHora = fechaHora;
         this.paciente = paciente;
         this.medico = medico;
-        this.medicamentos = medicamentos;
+        this.medicamentos = new ArrayList<Medicamento>();
     }
 
-    public void agregarMedicamento(String medicamento) {
+    public void agregarMedicamento(Medicamento medicamento) {
         medicamentos.add(medicamento);
     }
 
@@ -43,11 +44,11 @@ public class RecetaMedica {
         this.medico = medico;
     }
 
-    public List<String> getMedicamentos() {
+    public List<Medicamento> getMedicamentos() {
         return medicamentos;
     }
 
-    public void setMedicamentos(List<String> medicamentos) {
+    public void setMedicamentos(List<Medicamento> medicamentos) {
         this.medicamentos = medicamentos;
     }
 }
