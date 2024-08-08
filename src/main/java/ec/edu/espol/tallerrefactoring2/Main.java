@@ -1,6 +1,5 @@
 package ec.edu.espol.tallerrefactoring2;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 

@@ -31,7 +31,7 @@ public class SistemaAtencionMedico {
         int edadPaciente = consulta.getPaciente().getEdad();
         costoConsulta = calcularValorFinalConsulta(costoConsulta,edadPaciente);
         System.out.println("Se han cobrado "+ costoConsulta+ " dolares de su tarjeta de credito");
-        consulta.getPaciente().getHistorialMedico().addConsulta(consulta); //Hacer esto es incorrecto
+        consulta.getPaciente().getHistorialMedico().addConsulta(consulta);
     }
 
     public double calcularValorFinalConsulta(double costoConsulta, int edadPaciente){
