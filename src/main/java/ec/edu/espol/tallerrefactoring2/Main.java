@@ -1,12 +1,20 @@
 package ec.edu.espol.tallerrefactoring2;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+
 public class Main{
     static SistemaAtencionMedico sistemaAtencionMedica;
     public static void main(String[] args) {
         inicializar();
+        
+       LocalDateTime fechaHoraDeConsulta = LocalDateTime.of(2002, Month.MAY, 05, 12, 05);
+        
         Paciente paciente = sistemaAtencionMedica.obtenerPaciente("Dario");
         ServicioMedico servicioMedico = sistemaAtencionMedica.obtenerServicioMedico("Psiquiatria");
         Medico medico = sistemaAtencionMedica.obtenerMedico("Nohelia");
-        Consulta consulta = new Consulta(05,05,2002,"12:05",paciente,medico,servicioMedico,"dvasdv","asdvas",null);
+        Consulta consulta = new Consulta(fechaHoraDeConsulta,paciente,medico,servicioMedico,"dvasdv","asdvas",null);
         sistemaAtencionMedica.agendarConsulta(consulta);
     }
 
